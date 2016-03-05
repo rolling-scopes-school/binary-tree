@@ -204,7 +204,6 @@ describe('BinaryTree', () => {
 			
 			bt.insert(5);
 			bt.insert(6);
-			bt.isEmpty().should.equal(false);
 
 			bt.remove(5);
 			bt.isEmpty().should.equal(false);
