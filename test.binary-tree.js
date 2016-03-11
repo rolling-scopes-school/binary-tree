@@ -162,6 +162,10 @@ describe('BinaryTree', () => {
 
 			bt.should.deep.equal(btCopy);
 		});
+		it('correct remove root which contains passed data', () => {
+			bt.remove(bt.root.data);
+			bt.root.should.equal(btCopy.root.right);
+		});
 	});
 
 	describe('#size()', () => {
@@ -201,6 +205,12 @@ describe('BinaryTree', () => {
 
 			bt.remove(5);
 			bt.isEmpty().should.equal(true);
+
+			bt.insert(5);
+			bt.insert(6);
+
+			bt.remove(5);
+			bt.isEmpty().should.equal(false);
 		});
 	});
 });
